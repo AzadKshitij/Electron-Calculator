@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="cantainer1 preventSelect">
+    <div class="titleBar titleBarStyle ">
+      <div class="windowTitle">Calculator</div>
+      <div class="draggable draggable"></div>
+      <div class="windowControls windowControlsStyle preventSelect">
+        <button id="minimise">-</button>
+        <button id="maximise">[]</button>
+        <button id="close">X</button>
+      </div>
+    </div>
+  </div>
+  <div class="container preventSelect">
+    <div class="calc-body">
+      <div class="calc-screen">
+        <div class="calc-operation" id="subScreen"></div>
+        <!-- <div class="calc-typed" id="mainScreen"></div> -->
+        <input type="text" id="mainScreen" />
+      </div>
+      <div class="calc-button-row">
+        <div class="button ac" onclick="clearBoth()">AC</div>
+        <div class="button l" onclick="screen('(')">(</div>
+        <div class="button l" onclick="screen(')')">)</div>
+        <div class="button l" onclick="posNeg()">+/-</div>
+      </div>
+      <div class=" calc-button-row">
+        <div class="button c" onclick="clearScreen()">C</div>
+        <div class="button l" onclick="remove()">
+          < </div>
+            <div class="button l" onclick="screen('%')">%</div>
+            <div class="button l" onclick="screen('/')">/</div>
+        </div>
+        <div class="calc-button-row">
+          <div class="button" onclick="screen('7')">7</div>
+          <div class="button" onclick="screen('8')">8</div>
+          <div class="button" onclick="screen('9')">9</div>
+          <div class="button l" onclick="screen('*')">*</div>
+        </div>
+        <div class="calc-button-row">
+          <div class="button" onclick="screen('4')">4</div>
+          <div class="button" onclick="screen('5')">5</div>
+          <div class="button" onclick="screen('6')">6</div>
+          <div class="button l" onclick="screen('-')">-</div>
+        </div>
+        <div class="calc-button-row">
+          <div class="button" onclick="screen('1')">1</div>
+          <div class="button" onclick="screen('2')">2</div>
+          <div class="button" onclick="screen('3')">3</div>
+          <div class="button l" onclick="screen('+')">+</div>
+        </div>
+        <div class="calc-button-row">
+          <div class="button" onclick="screen('.')">.</div>
+          <div class="button" onclick="screen('0')">0</div>
+          <div class="button" onclick="screen('≠')">≠</div>
+          <div class="button l" onclick="solve()">=</div>
+        </div>
+      </div>
+    </div>
+</body>
+<script src="./main.js"></script>
+
+</html>
